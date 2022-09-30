@@ -30,17 +30,15 @@ section#login{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
-
     background-color: white;
     width: 250px;
     height: 570px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.459);
-
     transition: width 0.5s, height 0.5s;
     transition-timing-function: ease;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -68,10 +66,11 @@ div#formulario > p {
 
 form > div.campo {
     background-color: #602c8260;
+    border: 2px solid #602c8260;
     display: block;
-    width: 100%;
+    width: 99%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px;
 }
 
@@ -79,6 +78,23 @@ div.campo > label {
     display: none;
 }
 
+div.campo > span {
+    font-size: 2em;
+    
+    width: 30px;
+    padding: 5px;
+}
+
+div.campo > input{
+    background-color: #49a09d76;
+    font-size: 1em;
+    width: calc(100% - 50px);
+    
+    height: 95%;
+    border: 0px;
+    border-radius: 8px;
+    transform: translateY(-10px);
+}
 form > input[type=submit] {
     display: block;
     font-size: 1em;
@@ -91,6 +107,11 @@ form > input[type=submit] {
     cursor: pointer;
     transition: .3s;
 }
+/*foco ao clicar no campo input*/
+div.campo > input:focus-within {
+    background-color: white;
+
+}
 
 form > input[type=submit]:hover {
     background-color: #224f4d;
@@ -100,13 +121,14 @@ form > a.botao {
     display: block;
     text-align: center;
     font-size: 1em;
-    width: 100%;
+    width: 99%;
     height: 40px;
     padding-top: 5px;
     margin-top: 5px;
     background-color: white;
     color: #224f4d;
-    border: 1px solid #49a09d;
+    border: 1.5px solid #49a09d;
+    
     border-radius: 5px;
     text-decoration: none;
     transition: .3s;
